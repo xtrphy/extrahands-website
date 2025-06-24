@@ -18,11 +18,6 @@ const advaken = localFont({
     variable: "--font-advaken"
 });
 
-const saikono = localFont({
-    src: "./fonts/russia.ttf",
-    variable: "--font-saikono"
-})
-
 export const metadata: Metadata = {
     title: "EXTRA HANDS",
     description: "Официальный сайт команды EXTRA HANDS",
@@ -39,7 +34,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${rubik.variable} ${zaychik.variable} ${advaken.variable} ${saikono.variable} antialiased bg-black`}
+                className={`${advaken.variable} ${rubik.variable} ${zaychik.variable} antialiased bg-black`}
             >
                 {children}
             </body>
