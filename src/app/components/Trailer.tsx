@@ -28,7 +28,7 @@ const About = () => {
                 transition={{ duration: 1, ease: 'easeInOut' }}
                 viewport={{ once: true, amount: 0.2 }}
             >
-                <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center leading-tight max-w-4xl'>
+                <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl text-center leading-tight max-w-4xl'>
                     Посмотрите трейлер 1 эпизода!
                 </h1>
 
