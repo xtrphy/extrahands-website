@@ -16,6 +16,11 @@ const zaychik = localFont({
 const advaken = localFont({
     src: "./fonts/Advaken-Sans.otf",
     variable: "--font-advaken"
+});
+
+const saikono = localFont({
+    src: "./fonts/russia.ttf",
+    variable: "--font-saikono"
 })
 
 export const metadata: Metadata = {
@@ -34,7 +39,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${rubik.variable} ${zaychik.variable} ${advaken.variable} antialiased`}
+                className={`${rubik.variable} ${zaychik.variable} ${advaken.variable} ${saikono.variable} antialiased bg-black`}
             >
                 {children}
             </body>

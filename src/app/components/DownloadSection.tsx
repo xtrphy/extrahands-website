@@ -5,8 +5,10 @@ import { motion } from 'framer-motion';
 
 const platforms = [
     {
+        id: 1,
         title: 'Windows',
         link: 'https://disk.yandex.ru/d/_mKSzpAzOUyPdg',
+        fileSize: '455MB',
         lang: 'Lang.jpg',
         textColor: '#F1F1F1',
         icon: (
@@ -16,8 +18,10 @@ const platforms = [
         ),
     },
     {
+        id: 2,
         title: 'Android',
         link: 'https://disk.yandex.ru/d/qcMtUSBXmk4bqw',
+        fileSize: '491MB',
         lang: 'Lang2.jpg',
         textColor: '#010101',
         icon: (
@@ -43,10 +47,9 @@ const platforms = [
 
 const DownloadSection = () => {
     return (
-        <section className="bg-black relative h-screen overflow-hidden">
-            {/* Фон с анимацией блюра */}
+        <section id='main' className="relative h-screen overflow-hidden">
             <motion.div
-                className="absolute inset-0 bg-cover bg-center z-0"
+                className="absolute inset-0 bg-left sm:bg-center bg-cover z-0"
                 style={{
                     backgroundImage: `url('https://sun9-69.userapi.com/s/v1/if2/8C3ZDg-FlSfWCa1p6zxH2AQZfZdJaY0ufUyMh5X0j5Q1KiwrzJfPn1Cu6x0caiQeZN2wNbcOd5x6KCRbQlSTIaqu.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0')`,
                 }}
@@ -55,9 +58,8 @@ const DownloadSection = () => {
                 transition={{ duration: 1, delay: 0.2 }}
             />
 
-            {/* Содержимое */}
             <motion.div
-                className="relative z-10 flex flex-col items-center justify-center text-center h-full font-rubik"
+                className="relative z-10 flex flex-col items-center justify-center text-center h-full font-rubik px-4 sm:px-6 md:px-8"
                 initial={{ opacity: 0, filter: "blur(8px)" }}
                 animate={{ opacity: 1, filter: "blur(0px)" }}
                 transition={{ duration: 1, delay: 0.2 }}
@@ -67,26 +69,28 @@ const DownloadSection = () => {
                     Первый эпизод уже доступен!
                 </h2>
                 <div className="flex flex-col md:flex-row justify-center gap-6">
-                    {platforms.map(({ title, textColor, link, icon, lang }) => (
-                        <a
-                            key={title}
-                            href={link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="relative group rounded-xl overflow-hidden"
-                        >
-                            <div
-                                className="absolute inset-0 z-0 bg-cover bg-center transition duration-300 group-hover:brightness-75"
-                                style={{ backgroundImage: `url("/${lang}")` }}
-                            />
-                            <span
-                                className="relative z-10 flex items-center justify-center gap-2 px-6 py-3 font-normal text-lg"
-                                style={{ color: textColor }}
+                    {platforms.map(({ id, title, textColor, link, fileSize, icon, lang }) => (
+                        <div className='flex flex-col' key={id}>
+                            <a
+                                href={link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="relative group rounded-xl overflow-hidden w-[180px]"
                             >
-                                {icon}
-                                {title}
-                            </span>
-                        </a>
+                                <div
+                                    className="absolute inset-0 z-0 bg-cover bg-center transition duration-300 group-hover:brightness-75"
+                                    style={{ backgroundImage: `url("/${lang}")`, backgroundSize: '800px' }}
+                                />
+                                <span
+                                    className="relative z-10 flex items-center justify-center gap-2 px-6 py-3 font-normal text-lg"
+                                    style={{ color: textColor }}
+                                >
+                                    {icon}
+                                    {title}
+                                </span>
+                            </a>
+                            <span className='select-none mt-2 text-gray-300 text-[13px] font-extralight'>{fileSize}</span>
+                        </div>
                     ))}
                 </div>
             </motion.div>
