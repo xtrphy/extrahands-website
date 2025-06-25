@@ -51,7 +51,7 @@ const Separator = () => {
     return (
         <section
             ref={ref}
-            className='relative h-screen bg-black flex items-center justify-center font-advaken text-white overflow-hidden'
+            className='relative min-h-screen bg-black flex items-center justify-center font-advaken text-white overflow-hidden'
         >
             <motion.div
                 style={{ scale }}
