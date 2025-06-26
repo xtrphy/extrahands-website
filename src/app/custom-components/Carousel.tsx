@@ -4,6 +4,7 @@ import * as React from "react"
 import { useState, useEffect } from "react"
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
+import { motion, AnimatePresence } from "framer-motion"
 
 import {
     Carousel,
@@ -16,6 +17,7 @@ import {
 
 export default function CarouselPlugin() {
     const [isDesktop, setIsDesktop] = useState(false);
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [api, setApi] = useState<CarouselApi>();
     const [current, setCurrent] = useState(0);
     const plugin = React.useRef(
@@ -73,7 +75,10 @@ export default function CarouselPlugin() {
                 <CarouselContent>
                     {images.map((image, index) => (
                         <CarouselItem key={index}>
-                            <div className="relative aspect-video overflow-hidden rounded-lg transition-shadow duration-300">
+                            <div
+                                className="relative aspect-video overflow-hidden rounded-lg transition-shadow duration-300 cursor-pointer"
+                                onClick={() => setSelectedImage(image.src)}
+                            >
                                 <Image
                                     src={image.src}
                                     alt={image.alt}
@@ -108,6 +113,36 @@ export default function CarouselPlugin() {
                     />
                 ))}
             </div>
+
+            <AnimatePresence>
+                {selectedImage && (
+                    <motion.div
+                        className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        onClick={() => setSelectedImage(null)}
+                    >
+                        <motion.div
+                            className="relative w-full max-w-7xl aspect-video"
+                            onClick={(e) => e.stopPropagation()}
+                            initial={{ scale: 0.95, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.95, opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <Image
+                                src={selectedImage}
+                                alt="Полное изображение"
+                                fill
+                                className="object-contain rounded-lg shadow-xl"
+                                sizes="100vw"
+                            />
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </>
     );
 }
