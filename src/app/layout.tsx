@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "EXTRA HANDS",
     description: "Официальный сайт команды EXTRA HANDS",
     icons: {
-        icon: "/logo.png",
+        icon: "/logo.webp",
     },
 };
 

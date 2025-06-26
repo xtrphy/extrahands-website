@@ -12,7 +12,7 @@ const About = () => {
             <motion.div
                 className="absolute inset-0 bg-center bg-cover z-0"
                 style={{
-                    backgroundImage: `url('/corner.png')`,
+                    backgroundImage: `url('/corner.webp')`,
                     backgroundPosition: 'center',
                     backgroundAttachment: 'fixed',
                 }}

@@ -58,7 +58,7 @@ const Separator = () => {
                 className='absolute bottom-0 z-1'
             >
                 <Image
-                    src='/Anton.png'
+                    src='/Anton.webp'
                     alt='Anton'
                     width={1400}
                     height={600}

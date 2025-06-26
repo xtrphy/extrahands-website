@@ -79,7 +79,7 @@ const DownloadSection = () => {
                             >
                                 <div
                                     className="absolute inset-0 z-0 bg-cover bg-center transition duration-300 group-hover:brightness-65"
-                                    style={{ backgroundImage: `url("/${lang}")`, backgroundSize: '800px' }}
+                                    style={{ backgroundImage: `url("/${lang}")` }}
                                 />
                                 <span
                                     className="relative z-10 flex items-center justify-center gap-2 px-6 py-3 font-light text-lg"

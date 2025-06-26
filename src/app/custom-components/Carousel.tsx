@@ -51,14 +51,14 @@ export default function CarouselPlugin() {
     }, [api]);
 
     const images = [
-        { src: "/poselok.png", alt: "Посёлок" },
-        { src: "/Roditeli.png", alt: "Родители идут с коробками" },
-        { src: "/Anton_Olya_Hall.png", alt: "Антон и Оля в коридоре" },
-        { src: "/kladovka.png", alt: "Кладовка" },
-        { src: "/Magazin.png", alt: "Магазин" },
-        { src: "/Roma_Byasha.png", alt: "Рома и Бяша" },
-        { src: "/school.png", alt: "Школа" },
-        { src: "/Fox.png", alt: "Лиса" },
+        { src: "/poselok.webp", alt: "Посёлок" },
+        { src: "/Roditeli.webp", alt: "Родители идут с коробками" },
+        { src: "/Anton_Olya_Hall.webp", alt: "Антон и Оля в коридоре" },
+        { src: "/kladovka.webp", alt: "Кладовка" },
+        { src: "/Magazin.webp", alt: "Магазин" },
+        { src: "/Roma_Byasha.webp", alt: "Рома и Бяша" },
+        { src: "/school.webp", alt: "Школа" },
+        { src: "/Fox.webp", alt: "Лиса" },
     ];
 
     return (
