@@ -3,6 +3,8 @@ import { Rubik } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
+import Header from '@/app/custom-components/Header';
+
 const rubik = Rubik({
     subsets: ["cyrillic"],
     variable: "--font-rubik",
@@ -36,6 +38,7 @@ export default function RootLayout({
             <body
                 className={`${advaken.variable} ${rubik.variable} ${zaychik.variable} antialiased bg-black`}
             >
+                <Header />
                 {children}
             </body>
         </html>
