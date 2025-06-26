@@ -55,7 +55,7 @@ export default function CarouselPlugin() {
         { src: "/Roditeli.png", alt: "Родители идут с коробками" },
         { src: "/Anton_Olya_Hall.png", alt: "Антон и Оля в коридоре" },
         { src: "/kladovka.png", alt: "Кладовка" },
-        { src: "/magazin.png", alt: "Магазин" },
+        { src: "/Magazin.png", alt: "Магазин" },
         { src: "/Roma_Byasha.png", alt: "Рома и Бяша" },
         { src: "/school.png", alt: "Школа" },
         { src: "/Fox.png", alt: "Лиса" },
