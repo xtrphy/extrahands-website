@@ -15,7 +15,7 @@ const Screenshots = () => {
                 viewport={{ once: true, amount: 0.2 }}
                 className="w-full max-w-7xl mx-auto text-center"
             >
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-6 sm:mb-8 lg:mb-10 px-2 leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-6 sm:mb-8 lg:mb-10 px-2 leading-tight">
                     <Typewriter
                         words={["Нужно начать всё с чистого листа...", "Но всё ли так просто?", "Влияю ли я на что либо?", "", "Нет..."]}
                         loop={true}

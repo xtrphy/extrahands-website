@@ -65,7 +65,7 @@ export default function CarouselPlugin() {
         <>
             <Carousel
                 plugins={[plugin.current]}
-                className="w-full max-w-md sm:max-w-sm md:max-w-xl lg:max-w-3xl xl:max-w-xl 2xl:max-w-4xl mx-auto"
+                className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-3xl 2xl:max-w-4xl mx-auto"
                 onMouseEnter={plugin.current.stop}
                 onMouseLeave={plugin.current.reset}
                 setApi={setApi}
