@@ -64,7 +64,7 @@ export default function NavigationMenuDemo() {
                 pointerEvents: showHeader ? "auto" : "none",
             }}
             transition={{ duration: 0.3, delay: 0.2 }}
-            className={`font-advaken font-extralight fixed top-0 left-0 w-full z-50 transition-all duration-300 ${showHeader ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+            className={`font-advaken font-extralight fixed top-0 left-0 w-full z-50`}
         >
             <div className="hidden sm:block bg-black/30 p-4">
                 <NavigationMenu viewport={false}>
