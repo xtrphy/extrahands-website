@@ -39,6 +39,10 @@ const Reviews = () => {
         setVisibleCount(reviews.length);
     };
 
+    const handleShowLess = () => {
+        setVisibleCount(3);
+    };
+
     return (
         <section className="relative text-white font-advaken flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-12 min-h-screen px-4 sm:px-6 lg:px-8 py-8">
 
@@ -56,7 +60,7 @@ const Reviews = () => {
                 transition={{ duration: 1, delay: 0.2 }}
             />
 
-            <div className="flex flex-col gap-12 z-1 mt-16 sm:mt-32">
+            <div className="flex flex-col items-center gap-12 z-1 mt-16 sm:mt-32">
 
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center">Отзывы от наших игроков</h1>
 
@@ -69,9 +73,18 @@ const Reviews = () => {
                 {visibleCount < reviews.length && (
                     <button
                         onClick={handleShowMore}
-                        className="bg-transparent border-1 backdrop-blur-2xl text-white px-6 py-2 rounded-md text-lg font-medium hover:bg-white transition"
+                        className="bg-transparent border-1 backdrop-blur-lg text-white px-6 py-2 rounded-md text-lg font-medium hover:bg-white hover:text-black transition cursor-pointer"
                     >
                         Показать ещё
+                    </button>
+                )}
+
+                {visibleCount === reviews.length && (
+                    <button
+                        onClick={handleShowLess}
+                        className="bg-transparent border-1 backdrop-blur-lg text-white px-6 py-2 rounded-md text-lg font-medium hover:bg-white hover:text-black transition cursor-pointer"
+                    >
+                        Свернуть
                     </button>
                 )}
 
