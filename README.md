@@ -11,7 +11,7 @@ Website commissioned by EXTRA HANDS, a company specializing in developing a game
 - Modern look on **modern stack**
 - Smooth and interesting animations with **framer-motion**
 - Responsive website for **all** types of devices
-- Beautiful UI created with **shadcn** library
+- Beautiful UI created with **shadcn / uiverse** library
 - A **unique** website dedicated to gaming topics with useful sections for users
 - Using **TypeScript** for typing and avoiding unexpected errors
 
@@ -22,7 +22,7 @@ Website commissioned by EXTRA HANDS, a company specializing in developing a game
 - **Next.js** (App Router, SSR, SSG)
 - **TypeScript**
 - **Tailwind CSS**
-- **shadcn/ui** (UI components)
+- **shadcn/ui / uiverse** (UI components)
 
 ---
 
