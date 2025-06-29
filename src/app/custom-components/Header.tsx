@@ -39,6 +39,12 @@ const components: { img: string; title: string; href: string; description: strin
         description:
             "Здесь вы можете поддержать наш проект",
     },
+    {
+        img: "https://cdn.iconscout.com/icon/free/png-256/free-telegram-logo-icon-download-in-svg-png-gif-file-formats--new-social-media-logos-icons-1490132.png?f=webp",
+        title: "Telegram",
+        href: "https://t.me/extrahands",
+        description: "Наш телеграмм канал с новостями"
+    },
 ]
 
 export default function NavigationMenuDemo() {
@@ -72,6 +78,11 @@ export default function NavigationMenuDemo() {
                         <NavigationMenuItem>
                             <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
                                 <Link href="/">Главная</Link>
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                                <Link href="/about">О нас</Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
@@ -126,6 +137,7 @@ export default function NavigationMenuDemo() {
                             { href: "/", label: "Главная" },
                             { href: "https://vk.com/extra__hands?from=groups", label: "ВКонтакте", external: true },
                             { href: "https://www.youtube.com/@EXTRA-HANDS", label: "YouTube", external: true },
+                            { href: "https://t.me/extrahands", label: "Telegram", external: true },
                             { href: "https://www.donationalerts.com/r/extrahands", label: "Поддержать", external: true },
                             { href: "https://vk.com/im?entrypoint=community_page&media=&sel=-221086064", label: "Сотрудничество", external: true },
                         ].map((item, index) => (
