@@ -60,7 +60,7 @@ export default function NavigationMenuDemo() {
             initial={{ opacity: 0, filter: "blur(8px)" }}
             animate={{
                 opacity: showHeader ? 1 : 0,
-                filter: showHeader ? "blur(0px)" : "blue(8px)",
+                filter: showHeader ? "blur(0px)" : "blur(8px)",
                 pointerEvents: showHeader ? "auto" : "none",
             }}
             transition={{ duration: 0.3, delay: 0.2 }}
