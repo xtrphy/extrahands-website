@@ -69,7 +69,7 @@ export default function NavigationMenuDemo() {
                 filter: showHeader ? "blur(0px)" : "blur(8px)",
                 pointerEvents: showHeader ? "auto" : "none",
             }}
-            transition={{ duration: 0.3, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className={`font-advaken font-extralight fixed top-0 left-0 w-full z-50`}
         >
             <div className="hidden sm:block bg-black/30 p-4">
@@ -78,11 +78,6 @@ export default function NavigationMenuDemo() {
                         <NavigationMenuItem>
                             <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
                                 <Link href="/">Главная</Link>
-                            </NavigationMenuLink>
-                        </NavigationMenuItem>
-                        <NavigationMenuItem>
-                            <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                <Link href="/about">О нас</Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
@@ -173,7 +168,7 @@ function ListItem({
     ...props
 }: React.ComponentPropsWithoutRef<"li"> & { img: string; title: string; href: string }) {
     return (
-        <li {...props}>
+        <li {...props} className="hover:bg-black/10 rounded-lg transition">
             <NavigationMenuLink asChild>
                 <Link href={href} target="_blank">
                     <Image

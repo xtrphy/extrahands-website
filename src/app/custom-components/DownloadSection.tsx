@@ -62,7 +62,7 @@ const DownloadSection = () => {
                 className="relative z-10 flex flex-col items-center justify-center text-center h-full font-rubik px-4 sm:px-6 md:px-8"
                 initial={{ opacity: 0, filter: "blur(8px)" }}
                 animate={{ opacity: 1, filter: "blur(0px)" }}
-                transition={{ duration: 1, delay: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
             >
                 <h2
                     className="text-3xl md:text-5xl text-white mb-14 sm:mb-8 font-advaken font-extralight">
