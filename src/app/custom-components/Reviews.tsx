@@ -60,7 +60,7 @@ const Reviews = () => {
                 transition={{ duration: 1, delay: 0.2 }}
             />
 
-            <div className="flex flex-col items-center gap-12 z-1 mt-16 sm:mt-32">
+            <div className="flex flex-col items-center gap-12 z-1 my-16 sm:mt-32">
 
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center">Отзывы от наших игроков</h1>
 
@@ -90,6 +90,7 @@ const Reviews = () => {
 
             </div>
 
+            <div className='absolute -bottom-2 left-0 w-full h-16 sm:h-24 md:h-32 bg-gradient-to-b from-transparent to-black z-10 pointer-events-none'></div>
         </section>
     );
 };

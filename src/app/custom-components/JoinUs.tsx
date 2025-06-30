@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-const About = () => {
+const JoinUs = () => {
     return (
         <section className="relative text-white font-advaken flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-12 min-h-screen px-4 sm:px-6 lg:px-8 py-8">
-            <h1 className="text-8xl">TODO: About Section</h1>
+            <h1 className='text-7xl'>Играйте уже сейчас!</h1>
         </section>
     );
 };
 
-export default About;
+export default JoinUs;
