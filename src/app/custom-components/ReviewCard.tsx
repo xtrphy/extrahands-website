@@ -9,12 +9,12 @@ interface ReviewProps {
 }
 
 const AvatarComponent = ({ avatar, nickname }: { avatar: string, nickname: string }) => {
-    const firstTwoLetters = nickname.slice(0, 2);
+    const firstTwoLetters = nickname.slice(0, 2).toUpperCase();
 
     return (
         <Avatar>
             <AvatarImage src={avatar} />
-            <AvatarFallback>{firstTwoLetters}</AvatarFallback>
+            <AvatarFallback className='text-black'>{firstTwoLetters}</AvatarFallback>
         </Avatar>
     );
 }

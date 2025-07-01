@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import Header from '@/app/custom-components/Header';
+import Footer from "./custom-components/Footer";
 
 const rubik = Rubik({
     subsets: ["cyrillic"],
@@ -40,6 +41,7 @@ export default function RootLayout({
             >
                 <Header />
                 {children}
+                <Footer />
             </body>
         </html>
     );

@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const platforms = [
+export const platforms = [
     {
         id: 1,
         title: 'Windows',

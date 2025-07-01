@@ -4,7 +4,7 @@ import Trailer from './custom-components/Trailer';
 import Anton from './custom-components/Anton';
 import Screenshots from './custom-components/Screenshots';
 import Reviews from './custom-components/Reviews';
-import JoinUs from './custom-components/JoinUs';
+import JoinUs from './custom-components/PlayNow';
 
 const Home = () => {
     return (
