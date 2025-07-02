@@ -63,6 +63,8 @@ const Reviews = () => {
 
             </div>
 
+            <div className='absolute bottom-0 left-0 w-full h-16 sm:h-24 md:h-32 bg-gradient-to-b from-transparent to-black z-10 pointer-events-none'></div>
+
         </section>
     );
 };
