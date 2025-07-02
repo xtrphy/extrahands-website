@@ -16,7 +16,7 @@ const PlayNow = () => {
                     loop
                     muted
                     playsInline
-                    className="w-full h-auto object-cover"
+                    className="w-full h-full object-cover"
                 >
                     <source src="/Road.mp4" type="video/mp4" />
                     Ваш браузер не поддерживает видео.
@@ -31,32 +31,32 @@ const PlayNow = () => {
                 viewport={{ once: true }}
             >
 
-                <h2 className="text-3xl md:text-7xl text-white mb-14 sm:mb-8 font-advaken font-extralight">
+                <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl text-white mb-8 sm:mb-12 font-advaken font-extralight">
                     Играйте уже сейчас!
                 </h2>
 
-                <div className="flex flex-col md:flex-row justify-center gap-6">
+                <div className="flex flex-col md:flex-row justify-center items-center gap-4 sm:gap-6 md:gap-8">
                     {platforms.map(({ id, title, textColor, link, fileSize, icon, lang }) => (
-                        <div className='flex flex-col' key={id}>
+                        <div className='flex flex-col items-center' key={id}>
                             <a
                                 href={link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="relative group rounded-xl overflow-hidden w-[180px]"
+                                className="relative group rounded-xl overflow-hidden w-full sm:w-[180px]"
                             >
                                 <div
                                     className="absolute inset-0 z-0 bg-cover bg-center transition duration-300 group-hover:brightness-65"
                                     style={{ backgroundImage: `url("/${lang}")` }}
                                 />
                                 <span
-                                    className="relative z-10 flex items-center justify-center gap-2 px-6 py-3 font-light text-lg"
+                                    className="relative z-10 flex items-center justify-center gap-2 px-6 py-3 font-light text-base sm:text-lg"
                                     style={{ color: textColor }}
                                 >
                                     {icon}
                                     {title}
                                 </span>
                             </a>
-                            <span className='select-none mt-2 text-gray-300 text-[13px] font-extralight'>{fileSize}
+                            <span className='select-none mt-2 text-gray-300 text-[12px] sm:text-[13px] font-extralight'>{fileSize}
                             </span>
                         </div>
                     ))}

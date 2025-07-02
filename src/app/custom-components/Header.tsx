@@ -81,6 +81,11 @@ export default function NavigationMenuDemo() {
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
+                            <span className={`${navigationMenuTriggerStyle()} cursor-not-allowed opacity-50`}>
+                                О нас
+                            </span>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
                             <NavigationMenuTrigger>Соц сети</NavigationMenuTrigger>
                             <NavigationMenuContent>
                                 <ul className="grid w-[300px] gap-2 md:w-[400px] md:grid-cols-2 lg:w-[500px]">
@@ -130,6 +135,7 @@ export default function NavigationMenuDemo() {
                     >
                         {[
                             { href: "/", label: "Главная" },
+                            { href: "", label: "О нас", disabled: true },
                             { href: "https://vk.com/extra__hands?from=groups", label: "ВКонтакте", external: true },
                             { href: "https://www.youtube.com/@EXTRA-HANDS", label: "YouTube", external: true },
                             { href: "https://t.me/extrahands", label: "Telegram", external: true },
@@ -143,14 +149,20 @@ export default function NavigationMenuDemo() {
                                 exit={{ opacity: 0, y: 10 }}
                                 transition={{ delay: 0.05 * index, duration: 0.3 }}
                             >
-                                <Link
-                                    href={item.href}
-                                    target={item.external ? "_blank" : undefined}
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                    className="block hover:underline transition-all duration-200"
-                                >
-                                    {item.label}
-                                </Link>
+                                {item.disabled ? (
+                                    <span className="block cursor-not-allowed opacity-50">
+                                        {item.label}
+                                    </span>
+                                ) : (
+                                    <Link
+                                        href={item.href}
+                                        target={item.external ? "_blank" : undefined}
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                        className="block hover:underline transition-all duration-200"
+                                    >
+                                        {item.label}
+                                    </Link>
+                                )}
                             </motion.div>
                         ))}
                     </motion.div>
