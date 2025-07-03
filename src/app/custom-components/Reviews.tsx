@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import ReviewCard from "./ReviewCard";
-import { motion } from "framer-motion";
 import { reviews } from "@/data/reviews";
 
 const Reviews = () => {
@@ -21,19 +20,7 @@ const Reviews = () => {
 
             <div className='absolute -top-2 left-0 w-full h-16 sm:h-24 md:h-32 bg-gradient-to-t from-transparent to-black z-10 pointer-events-none'></div>
 
-            <motion.div
-                className="absolute inset-0 bg-center bg-cover z-0"
-                style={{
-                    backgroundImage: `url('/corner.webp')`,
-                    backgroundPosition: 'center',
-                    backgroundAttachment: 'fixed',
-                }}
-                initial={{ opacity: 0, filter: "blur(8px)" }}
-                animate={{ opacity: 1, filter: "blur(4px)" }}
-                transition={{ duration: 1, delay: 0.2 }}
-            />
-
-            <div className="flex flex-col items-center gap-12 z-1 my-16 sm:mt-32">
+            <div className="flex flex-col items-center gap-12 my-16 sm:mt-32">
 
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center">Отзывы от наших игроков</h1>
 
