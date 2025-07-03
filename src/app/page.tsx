@@ -5,6 +5,7 @@ import Anton from './custom-components/Anton';
 import Screenshots from './custom-components/Screenshots';
 import Reviews from './custom-components/Reviews';
 import JoinUs from './custom-components/PlayNow';
+import AboutMod from './custom-components/AboutMod';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Anton />
             <Trailer />
             <Screenshots />
+            <AboutMod />
             <Reviews />
             <JoinUs />
         </>
