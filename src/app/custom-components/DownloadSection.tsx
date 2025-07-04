@@ -56,6 +56,8 @@ const DownloadSection = () => {
                     alt="Основной баннер"
                     fill
                     priority
+                    placeholder="blur"
+                    blurDataURL="/background_low.webp"
                     className="object-cover blur-xs"
                     sizes="100vw"
                 />
