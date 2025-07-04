@@ -79,7 +79,7 @@ const Separator = () => {
                 Или нет?...
             </motion.h2>
 
-            <div className='absolute bottom-0 left-0 w-full h-64 bg-gradient-to-b from-transparent to-black z-10 pointer-events-auto'></div>
+            <div className='absolute bottom-0 left-0 w-full h-32 sm:h-48 md:h-64 bg-gradient-to-b from-transparent to-black z-10 pointer-events-none'></div>
 
         </section>
     );

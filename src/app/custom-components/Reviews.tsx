@@ -18,8 +18,6 @@ const Reviews = () => {
     return (
         <section className="relative text-white font-advaken flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-12 min-h-screen px-4 sm:px-6 lg:px-8 py-8 rounded-b-3xl">
 
-            <div className='absolute -top-2 left-0 w-full h-16 sm:h-24 md:h-32 bg-gradient-to-t from-transparent to-black z-10 pointer-events-none'></div>
-
             <div className="flex flex-col items-center gap-12 my-16 sm:mt-32">
 
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center">Отзывы от наших игроков</h1>
@@ -49,8 +47,6 @@ const Reviews = () => {
                 )}
 
             </div>
-
-            <div className='absolute bottom-0 left-0 w-full h-16 sm:h-24 md:h-32 bg-gradient-to-b from-transparent to-black z-10 pointer-events-none'></div>
 
         </section>
     );

@@ -40,7 +40,9 @@ export default function RootLayout({
                 className={`${advaken.variable} ${rubik.variable} ${zaychik.variable} antialiased bg-black`}
             >
                 <Header />
-                {children}
+                <main>
+                    {children}
+                </main>
                 <Footer />
             </body>
         </html>

@@ -13,7 +13,7 @@ const AvatarComponent = ({ avatar, nickname }: { avatar: string, nickname: strin
 
     return (
         <Avatar>
-            <AvatarImage src={avatar} />
+            <AvatarImage src={avatar} alt={nickname} />
             <AvatarFallback className='text-black'>{firstTwoLetters}</AvatarFallback>
         </Avatar>
     );
