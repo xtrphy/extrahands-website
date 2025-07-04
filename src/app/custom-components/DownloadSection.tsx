@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import Image from "next/image";
 
 export const platforms = [
     {
         id: 1,
-        title: 'Windows',
-        link: 'https://disk.yandex.ru/d/_mKSzpAzOUyPdg',
-        fileSize: '455MB',
-        lang: 'Lang.jpg',
-        textColor: '#F1F1F1',
+        title: "Windows",
+        link: "https://disk.yandex.ru/d/_mKSzpAzOUyPdg",
+        fileSize: "455MB",
+        lang: "Lang.jpg",
+        textColor: "#F1F1F1",
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" fill="#F1F1F1" viewBox="0 0 24 24" width="24" height="24">
                 <path d="M1 3l9-1.5v9H1V3zm10.5-1.7L23 0v10.5h-11.5V1.3zM1 12h9v9L1 19.5V12zm10.5 0H23V24l-11.5-1.8V12z" />
@@ -19,11 +19,11 @@ export const platforms = [
     },
     {
         id: 2,
-        title: 'Android',
-        link: 'https://disk.yandex.ru/d/qcMtUSBXmk4bqw',
-        fileSize: '491MB',
-        lang: 'Lang2.jpg',
-        textColor: '#010101',
+        title: "Android",
+        link: "https://disk.yandex.ru/d/qcMtUSBXmk4bqw",
+        fileSize: "491MB",
+        lang: "Lang2.jpg",
+        textColor: "#010101",
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="-22.5 0 301 301" version="1.1" preserveAspectRatio="xMidYMid">
                 <g>
@@ -47,30 +47,25 @@ export const platforms = [
 
 const DownloadSection = () => {
     return (
-        <section id='main' className="relative h-screen overflow-hidden">
-            <motion.div
-                className="absolute inset-0 bg-left sm:bg-center sm:bg- bg-cover z-0"
-                style={{
-                    backgroundImage: `url('https://sun9-69.userapi.com/s/v1/if2/8C3ZDg-FlSfWCa1p6zxH2AQZfZdJaY0ufUyMh5X0j5Q1KiwrzJfPn1Cu6x0caiQeZN2wNbcOd5x6KCRbQlSTIaqu.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720,1440x810,1920x1080&from=bu&cs=1920x0')`,
-                }}
-                initial={{ opacity: 0, filter: "blur(8px)" }}
-                animate={{ opacity: 1, filter: "blur(4px)" }}
-                transition={{ duration: 1, delay: 0.2 }}
-            />
+        <section className="relative h-screen overflow-hidden">
 
-            <motion.div
-                className="relative z-10 flex flex-col items-center justify-center text-center h-full font-rubik px-4 sm:px-6 md:px-8"
-                initial={{ opacity: 0, filter: "blur(8px)" }}
-                animate={{ opacity: 1, filter: "blur(0px)" }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-            >
-                <h2
-                    className="text-3xl md:text-5xl text-white mb-14 sm:mb-8 font-advaken font-extralight">
+            <div className="relative z-10 flex flex-col items-center justify-center text-center h-full font-rubik px-4 sm:px-6 md:px-8">
+
+                <Image
+                    src="/background.webp"
+                    alt="Основной баннер"
+                    fill
+                    priority
+                    className="object-cover blur-xs"
+                    sizes="100vw"
+                />
+
+                <h2 className="z-1 text-3xl md:text-5xl text-white mb-14 sm:mb-8 font-advaken font-extralight">
                     Первый эпизод уже доступен!
                 </h2>
                 <div className="flex flex-col md:flex-row justify-center gap-6">
                     {platforms.map(({ id, title, textColor, link, fileSize, icon, lang }) => (
-                        <div className='flex flex-col' key={id}>
+                        <div className="z-1 flex flex-col" key={id}>
                             <a
                                 href={link}
                                 target="_blank"
@@ -89,14 +84,14 @@ const DownloadSection = () => {
                                     {title}
                                 </span>
                             </a>
-                            <span className='select-none mt-2 text-gray-300 text-[13px] font-extralight'>{fileSize}
+                            <span className="select-none mt-2 text-gray-300 text-[13px] font-extralight">{fileSize}
                             </span>
                         </div>
                     ))}
                 </div>
-            </motion.div>
+            </div>
 
-            <div className='absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-black z-10 pointer-events-auto'></div>
+            <div className='absolute bottom-0 left-0 w-full h-16 sm:h-24 md:h-32 bg-gradient-to-b from-transparent to-black z-10 pointer-events-none'></div>
         </section>
     );
 };
