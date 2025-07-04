@@ -58,7 +58,7 @@ const DownloadSection = () => {
                     priority
                     placeholder="blur"
                     blurDataURL="/background_low.webp"
-                    className="object-cover blur-xs"
+                    className="object-left sm:object-center object-cover blur-xs"
                     sizes="100vw"
                 />
 
