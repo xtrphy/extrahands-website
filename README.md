@@ -2,7 +2,7 @@
 
 Website commissioned by EXTRA HANDS, a company specializing in developing a game modification for the visual novel Tiny Bunny.
 
-## 👉 [Live demo](https://extrahands-website.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=netlify)](https://extrahands-website.vercel.app/)
 
 
 ## Features
