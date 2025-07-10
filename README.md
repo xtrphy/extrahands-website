@@ -4,7 +4,6 @@ Website commissioned by EXTRA HANDS, a company specializing in developing a game
 
 ## 👉 [Live demo](https://extrahands-website.vercel.app/)
 
----
 
 ## Features
 
@@ -15,7 +14,6 @@ Website commissioned by EXTRA HANDS, a company specializing in developing a game
 - A **unique** website dedicated to gaming topics with useful sections for users
 - Using **TypeScript** for typing and avoiding unexpected errors
 
----
 
 ## Tech Stack
 
@@ -24,7 +22,6 @@ Website commissioned by EXTRA HANDS, a company specializing in developing a game
 - **Tailwind CSS**
 - **shadcn/ui / uiverse** (UI components)
 
----
 
 ## Getting Started
 
@@ -35,14 +32,14 @@ Website commissioned by EXTRA HANDS, a company specializing in developing a game
    ```
 
 2. Install dependencies:
-      ```bash
-      npm install
-      ```
+   ```bash
+   npm install
+   ```
 
 3. Start the development server:
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
 ## Contributing
 
