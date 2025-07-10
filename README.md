@@ -4,6 +4,14 @@ Website commissioned by EXTRA HANDS, a company specializing in developing a game
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=netlify)](https://extrahands-website.vercel.app/)
 
+## Screenshots
+
+![Main section screenshot](https://github.com/user-attachments/assets/6a86ad35-15a5-44b2-86bc-c47666634836)
+
+![Testimonials section screenshot](https://github.com/user-attachments/assets/33e0a67c-b522-4e4b-a175-d85c0bf25c0e)
+
+![Play now section screenshot](https://github.com/user-attachments/assets/9f3ba358-39fa-4da5-a2f3-9b34221986cc)
+
 
 ## Features
 
